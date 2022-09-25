@@ -1,0 +1,62 @@
+<div class="conatainer">
+    <form [formGroup]="editForm" (ngSubmit)="onUserEditSubmit()">
+        <!-- <h4>{{hero.heading}}</h4>
+        <h6>{{hero.objective}}</h6> -->
+        <div class="mb-2">
+            <label class="form-label">title</label>
+            <input type="text"  formControlName="title" class="form-control" placeholder="title" id="title">
+            <span style="color:red;" *ngIf="title && title.invalid && title.touched">
+                Invalid title.
+            </span>
+        </div>
+        <div class="mb-2">
+            <label class="form-label">description</label>
+            <input type="text"  formControlName="description" class="form-control" placeholder="description" class="form-control" id="description">
+            <span style="color:red;" *ngIf="description && description.invalid && description.touched">
+                Please enter description.
+            </span>
+        </div>
+        <div class="mb-2">
+            <label class="form-label">Status</label>
+            <input type="text"  formControlName="status" class="form-control" placeholder="description" class="form-control" id="Status">
+            <!-- <span style="color:red;" *ngIf="description && description.invalid && description.touched">
+                Please enter description.
+            </span> -->
+        </div>
+        <div class="mb-2">
+            <label class="form-label">type</label>
+            <input type="text"  formControlName="type" class="form-control" placeholder="type" class="form-control" id="type">
+            <!-- <span style="color:red;" *ngIf="description && description.invalid && description.touched">
+                Please enter description.
+            </span> -->
+        </div>
+        <button class="btn btn-primary mt-3" type="submit">Update</button>
+        <!-- <button class ='btn btn-primary m-2' type="submit btn-primary" (click)="filldata()">Fill data</button> -->
+    </form>
+</div>
+
+<!-- <div class="container">
+    <div class="col-md-12">
+        <table class="text-center">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let table of data; index as i">
+                    <td>{{i+1}}</td>
+                    <td>{{table.title}}</td>
+                    <td>{{table.description}}</td>
+                    <td>
+                        <button class=" btn btn-primary" (click)="editTableData(table.id)">Edit</button>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div> -->
